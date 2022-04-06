@@ -16,6 +16,7 @@ public class Scan {
         System.out.println("What is your credit card number, " + username + "?");
         String cardNumber = scanner.nextLine();
         System.out.println("------------------------\n|                      |\n|   " + cardNumber + "   |\n|                      |\n|   " + username + spaces + "|\n|                      |\n------------------------");
+        scanner.close();
     }
 
 }
