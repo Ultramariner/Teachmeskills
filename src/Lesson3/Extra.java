@@ -9,14 +9,12 @@ public class Extra {
         System.out.println("Task 1");
         int first = 0;
         int second = 1;
-        int next;
         System.out.println(first);
         System.out.println(second);
         for (int i = 2; i < 10; i++) {
-            next = first + second;
-            System.out.println(next);
-            first = second;
-            second = next;
+            second += first;
+            System.out.println(second);
+            first = second - first;
         }
 
         System.out.println("Task 2");
