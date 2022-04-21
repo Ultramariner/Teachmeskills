@@ -14,6 +14,7 @@ public class ArrayFunctions {
             if (length > 0) check = false;
             else System.out.println("Wrong value, try again");
         }
+        scanner.close();
         return length;
     }
 
