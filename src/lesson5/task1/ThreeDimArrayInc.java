@@ -24,7 +24,6 @@ public class ThreeDimArrayInc {
         increaseArray(increase, array);
         System.out.println("Result array is:");
         ArrayFunctions.printArray(array);
-        scanner.close();
     }
 
     public static void increaseArray(int number, int[][][] array) {
