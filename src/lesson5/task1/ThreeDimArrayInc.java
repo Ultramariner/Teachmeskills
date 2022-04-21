@@ -7,7 +7,7 @@ public class ThreeDimArrayInc {
 
     public static void main(String[] args) {
         int dim1, dim2, dim3;
-        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Enter dimension 1 length:");
         dim1 = ArrayFunctions.checkLength();
         System.out.println("Enter dimension 2 length:");
@@ -19,6 +19,7 @@ public class ThreeDimArrayInc {
         System.out.println("Your array is:");
         ArrayFunctions.printArray(array);
 
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your number:");
         int increase = scanner.nextInt();
         increaseArray(increase, array);
