@@ -1,6 +1,8 @@
 package lesson7.task1;
 
-public class Circle extends Figure{
+import lesson7.task1.impl.Figure;
+
+public class Circle extends Figure {
 
     private double radius;
     private final double PI = 3.14;

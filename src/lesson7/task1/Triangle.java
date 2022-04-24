@@ -1,8 +1,10 @@
 package lesson7.task1;
 
-public class Triangle extends Figure{
+import lesson7.task1.impl.Figure;
 
-    private double side;
+public class Triangle extends Figure {
+
+    private double side;        //взял равносторонний чтобы упростить расчёты и наследование прямоугольника было заметнее
 
     public Triangle(String name, double side) {
         super(name);

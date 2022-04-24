@@ -1,4 +1,4 @@
-package lesson7.task1;
+package lesson7.task1.impl;
 
 public abstract class Figure {
 
