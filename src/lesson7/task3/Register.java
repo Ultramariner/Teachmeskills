@@ -1,9 +1,9 @@
-package lesson7.tesk3;
+package lesson7.task3;
 
-import lesson7.tesk3.documents.Consignment;
-import lesson7.tesk3.documents.EmployeeContract;
-import lesson7.tesk3.documents.GoodsContract;
-import lesson7.tesk3.impl.Document;
+import lesson7.task3.documents.Consignment;
+import lesson7.task3.documents.EmployeeContract;
+import lesson7.task3.documents.GoodsContract;
+import lesson7.task3.impl.Document;
 
 import java.util.Date;
 import java.util.Objects;

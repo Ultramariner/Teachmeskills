@@ -1,4 +1,4 @@
-package lesson7.tesk3.impl;
+package lesson7.task3.impl;
 
 import java.util.Date;
 
