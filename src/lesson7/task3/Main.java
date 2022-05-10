@@ -1,4 +1,4 @@
-package lesson7.tesk3;
+package lesson7.task3;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

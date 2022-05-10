@@ -1,6 +1,6 @@
-package lesson7.tesk3.documents;
+package lesson7.task3.documents;
 
-import lesson7.tesk3.impl.Document;
+import lesson7.task3.impl.Document;
 
 import java.util.Date;
 
