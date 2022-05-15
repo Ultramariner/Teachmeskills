@@ -53,31 +53,4 @@ public class Vectors {
         }
         scanner.close();
     }
-
-/*    public static void initVectorArr(Vector[] vectors) {
-        for (int i = 0; i < vectors.length; i++) {
-            vectors[i] = getRand();
-        }
-        System.out.println("Array filled");
-    }
-
-    public static void printVectorArr(Vector[] vectors) {
-        System.out.println("Array vectors:");
-        for (Vector vector : vectors) {
-            vector.getInfo();
-        }
-    }
-
-    public static Vector getRand() {
-        switch ((int) (Math.random() * 3 + 1)) {
-            case 1:
-                return new Vector(Math.random() * 9 + 1);
-            case 2:
-                return new Vector(Math.random() * 9 + 1, Math.random() * 9 + 1);
-            case 3:
-                return new Vector(Math.random() * 9 + 1, Math.random() * 9 + 1, Math.random() * 9 + 1);
-            default:
-                return null;
-        }
-    }*/
 }
