@@ -1,8 +1,5 @@
 package lesson10;
 
-import lesson10.impl.Employee;
-import lesson10.impl.Positions;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 

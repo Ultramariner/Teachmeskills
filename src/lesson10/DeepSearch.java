@@ -1,7 +1,5 @@
 package lesson10;
 
-import lesson10.impl.Employee;
-
 public class DeepSearch {
 
     public static boolean search (Employee employee1, Employee employee2) {

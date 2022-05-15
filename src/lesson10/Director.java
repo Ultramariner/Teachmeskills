@@ -1,8 +1,5 @@
 package lesson10;
 
-import lesson10.impl.Employee;
-import lesson10.impl.Positions;
-
 import java.util.ArrayList;
 
 public class Director extends Employee {
@@ -49,7 +46,7 @@ public class Director extends Employee {
 
     @Override
     public double getSalary() {
-        return BASERATE * getExperience() * getPosition().getRate() * (getAssigned().size() + 1);
+        return super.getSalary() * (getAssigned().size() + 1);
     }
 
     public String toStringAssigned() {
