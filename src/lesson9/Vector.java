@@ -79,7 +79,7 @@ public class Vector {
         }
     }
 
-    public double getScalarMultiplication(Vector vectorA, Vector vectorB) {
+    public static double getScalarMultiplication(Vector vectorA, Vector vectorB) {
         if (vectorA.getDim() == vectorB.getDim()) {
             switch (vectorA.getDim()) {
                 case 1:
@@ -95,7 +95,7 @@ public class Vector {
         else return 0;
     }
 
-    public Vector getVectorsAdd(Vector vectorA, Vector vectorB) {
+    public static Vector getVectorsAdd(Vector vectorA, Vector vectorB) {
         if (vectorA.getDim() == vectorB.getDim()) {
             switch (vectorA.getDim()) {
                 case 1:
@@ -111,7 +111,7 @@ public class Vector {
         else return null;
     }
 
-    public Vector getVectorsSub(Vector vectorA, Vector vectorB) {
+    public static Vector getVectorsSub(Vector vectorA, Vector vectorB) {
         if (vectorA.getDim() == vectorB.getDim()) {
             switch (vectorA.getDim()) {
                 case 1:
@@ -127,7 +127,7 @@ public class Vector {
         else return null;
     }
 
-    public boolean compareVectors(Vector vectorA, Vector vectorB) {
+    public static boolean compareVectors(Vector vectorA, Vector vectorB) {
         if (vectorA.getDim() == vectorB.getDim()) {
             switch (vectorA.getDim()) {
                 case 1:
@@ -141,6 +141,33 @@ public class Vector {
             }
         }
         else return false;
+    }
+
+    public static void initVectorArr(Vector[] vectors) {
+        for (int i = 0; i < vectors.length; i++) {
+            vectors[i] = getRand();
+        }
+        System.out.println("Array filled");
+    }
+
+    public static void printVectorArr(Vector[] vectors) {
+        System.out.println("Array vectors:");
+        for (Vector vector : vectors) {
+            vector.getInfo();
+        }
+    }
+
+    public static Vector getRand() {
+        switch ((int) (Math.random() * 3 + 1)) {
+            case 1:
+                return new Vector(Math.random() * 9 + 1);
+            case 2:
+                return new Vector(Math.random() * 9 + 1, Math.random() * 9 + 1);
+            case 3:
+                return new Vector(Math.random() * 9 + 1, Math.random() * 9 + 1, Math.random() * 9 + 1);
+            default:
+                return null;
+        }
     }
 
     public void getInfo() {

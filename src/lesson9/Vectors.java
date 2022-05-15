@@ -11,8 +11,8 @@ public class Vectors {
         Scanner scanner = new Scanner(System.in);
         byte vector1, vector2;
         boolean run = true;
-        initVectorArr(vectors);
-        printVectorArr(vectors);
+        Vector.initVectorArr(vectors);
+        Vector.printVectorArr(vectors);
         while (run) {
             System.out.printf("What to do:%n1. Calculate multiplication%n2. Calculate addition%n3. Calculate subtraction%n4. Comparison%n");
             switch (scanner.nextByte()) {
@@ -20,13 +20,13 @@ public class Vectors {
                     System.out.println("Enter vectors numbers:");
                     vector1 = scanner.nextByte();
                     vector2 = scanner.nextByte();
-                    System.out.printf("Result is %f%n", vectors[0].getScalarMultiplication(vectors[vector1 - 1], vectors[vector2 - 1]));
+                    System.out.printf("Result is %f%n", Vector.getScalarMultiplication(vectors[vector1 - 1], vectors[vector2 - 1]));
                     break;
                 case 2:
                     System.out.println("Enter vectors numbers:");
                     vector1 = scanner.nextByte();
                     vector2 = scanner.nextByte();
-                    temp = vectors[0].getVectorsAdd(vectors[vector1 - 1], vectors[vector2 - 1]);
+                    temp = Vector.getVectorsAdd(vectors[vector1 - 1], vectors[vector2 - 1]);
                     System.out.print("Result is ");
                     temp.getInfo();
                     break;
@@ -34,7 +34,7 @@ public class Vectors {
                     System.out.println("Enter vectors numbers:");
                     vector1 = scanner.nextByte();
                     vector2 = scanner.nextByte();
-                    temp = vectors[0].getVectorsSub(vectors[vector1 - 1], vectors[vector2 - 1]);
+                    temp = Vector.getVectorsSub(vectors[vector1 - 1], vectors[vector2 - 1]);
                     System.out.print("Result is ");
                     temp.getInfo();
                     break;
@@ -42,7 +42,7 @@ public class Vectors {
                     System.out.println("Enter vectors numbers:");
                     vector1 = scanner.nextByte();
                     vector2 = scanner.nextByte();
-                    if (vectors[0].compareVectors(vectors[vector1 - 1], vectors[vector2 - 1])) System.out.println("Vectors are identical");
+                    if (Vector.compareVectors(vectors[vector1 - 1], vectors[vector2 - 1])) System.out.println("Vectors are identical");
                     else System.out.println("Vectors are different");
                     break;
                 default:
@@ -54,7 +54,7 @@ public class Vectors {
         scanner.close();
     }
 
-    public static void initVectorArr(Vector[] vectors) {
+/*    public static void initVectorArr(Vector[] vectors) {
         for (int i = 0; i < vectors.length; i++) {
             vectors[i] = getRand();
         }
@@ -68,7 +68,7 @@ public class Vectors {
         }
     }
 
-    public static Vector getRand() {            //лень в Vector писать
+    public static Vector getRand() {
         switch ((int) (Math.random() * 3 + 1)) {
             case 1:
                 return new Vector(Math.random() * 9 + 1);
@@ -79,5 +79,5 @@ public class Vectors {
             default:
                 return null;
         }
-    }
+    }*/
 }
