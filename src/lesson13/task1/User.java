@@ -1,4 +1,4 @@
-package lesson13;
+package lesson13.task1;
 
 public class User implements Comparable {
 
@@ -19,7 +19,7 @@ public class User implements Comparable {
     @Override
     public int hashCode() {
         return super.hashCode();
-    }
+    }   //Зачем в задании писалось переопределить hashCode()?
 
     @Override
     public boolean equals(Object obj) {
