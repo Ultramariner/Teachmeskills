@@ -1,0 +1,30 @@
+create table people (
+                        pid SERIAL primary key,
+                        f_name varchar,
+                        f_sex boolean,
+                        f_birth_date date
+);
+
+create table hobby_type (
+                            pid SERIAL primary key,
+                            f_hobby_type_name varchar
+);
+
+create table hobby (
+                       pid SERIAL primary key,
+                       f_hobby_name varchar,
+                       f_hobby_type int,
+                       constraint fk_hobby_type foreign key (f_hobby_type) references hobby_type (pid)
+);
+
+create table people_hobby (
+                              pid SERIAL primary key,
+                              f_peopleId int,
+                              f_hobbyId int,
+                              constraint fk_people foreign key (f_peopleId) references people (pid),
+                              constraint fk_hobby foreign key (f_hobbyId) references hobby (pid)
+);
+
+
+drop table people_hobby, hobby, hobby_type, people;
+

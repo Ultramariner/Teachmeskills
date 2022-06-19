@@ -1,0 +1,31 @@
+insert into "TMS_lessons".people (f_name, f_sex, f_birth_date) values ('User1', true, '2001-01-01'),
+                                                                      ('User2', false, '2002-01-01'),
+                                                                      ('User3', true, '2003-01-01'),
+                                                                      ('User4', false, '2004-01-01'),
+                                                                      ('User5', true, '2005-01-01'),
+                                                                      ('User6', false, '2006-01-01'),
+                                                                      ('User7', true, '2007-01-01'),
+                                                                      ('User8', false, '2008-01-01'),
+                                                                      ('User9', true, '2009-01-01'),
+                                                                      ('User10', false, '2010-01-01');
+
+insert into "TMS_lessons".hobby_type (f_hobby_type_name) values ('active'),
+                                                                ('passive');
+
+insert into "TMS_lessons".hobby (f_hobby_name, f_hobby_type) values ('football', 1),
+                                                                    ('hockey', 1),
+                                                                    ('reading', 2),
+                                                                    ('jogging', 1),
+                                                                    ('drawing', 2),
+                                                                    ('modeling', 2);
+
+insert into "TMS_lessons".people_hobby (f_peopleid, f_hobbyid) values (1, 1),
+                                                                      (1, 3),
+                                                                      (2, 1),
+                                                                      (2, 3),
+                                                                      (2, 6),
+                                                                      (3, 4),
+                                                                      (5, 6),
+                                                                      (7, 5),
+                                                                      (8, 3),
+                                                                      (9, 1);
