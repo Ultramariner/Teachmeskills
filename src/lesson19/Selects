@@ -1,0 +1,13 @@
+select * from people where CURRENT_DATE - f_birth_date > 17 * 365;
+
+select count(*) from people group by f_sex;
+
+select p.pid, f_name, f_sex, f_birth_date, h.f_hobby_name, ht.f_hobby_type_name from people p join people_hobby ph on p.pid = ph.f_peopleid join hobby h on h.pid = ph.f_hobbyid join hobby_type ht on ht.pid = h.f_hobby_type;
+
+select * from people where pid in (select distinct f_peopleid from people_hobby group by f_peopleid having count(*) > 1);
+
+select * from people where pid in (select distinct f_peopleid from people_hobby where f_hobbyid in (select pid from hobby where f_hobby_type in (select pid from hobby_type where f_hobby_type_name = 'passive')));
+
+select count(*), ht.f_hobby_type_name from hobby h join hobby_type ht on h.f_hobby_type = ht.pid group by ht.f_hobby_type_name;
+
+select h.pid, h.f_hobby_name, ht.f_hobby_type_name from hobby h join hobby_type ht on h.f_hobby_type = ht.pid;
