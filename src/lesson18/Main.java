@@ -11,13 +11,14 @@ public class Main {
         Lock lock = new ReentrantLock();
         Storage storage = new Storage();
         StorageLock storage2 = new StorageLock(lock);
+        long time = System.currentTimeMillis();
 
-        MySynchronizedThread thread1Update = new MySynchronizedThread(storage); //...(storage2);
-        MySynchronizedThread thread2Update = new MySynchronizedThread(storage); //...(storage2);
-        MySynchronizedThread thread3Update = new MySynchronizedThread(storage); //...(storage2);
-        MySynchronizedThread thread4Get = new MySynchronizedThread(storage); //...(storage2);
-        MySynchronizedThread thread5Get = new MySynchronizedThread(storage); //...(storage2);
-        MySynchronizedThread thread6Get = new MySynchronizedThread(storage); //...(storage2);
+        MySynchronizedThread thread1Update = new MySynchronizedThread(storage, 1); //...(storage2);
+        MySynchronizedThread thread2Update = new MySynchronizedThread(storage, 1); //...(storage2);
+        MySynchronizedThread thread3Update = new MySynchronizedThread(storage, 1); //...(storage2);
+        MySynchronizedThread thread4Get = new MySynchronizedThread(storage, 2); //...(storage2);
+        MySynchronizedThread thread5Get = new MySynchronizedThread(storage, 2); //...(storage2);
+        MySynchronizedThread thread6Get = new MySynchronizedThread(storage, 2); //...(storage2);
 
         thread1Update.start();
         thread2Update.start();
@@ -26,15 +27,7 @@ public class Main {
         thread5Get.start();
         thread6Get.start();
 
-        long time = System.currentTimeMillis();
-        while (System.currentTimeMillis() - time < 3000) {
-            System.out.println(thread1Update.update());
-            System.out.println(thread2Update.update());
-            System.out.println(thread3Update.update());
-            System.out.println(thread4Get.getElement());
-            System.out.println(thread5Get.getElement());
-            System.out.println(thread6Get.getElement());
-        }
+        Thread.sleep(3000);
 
         thread1Update.interrupt();
         thread2Update.interrupt();

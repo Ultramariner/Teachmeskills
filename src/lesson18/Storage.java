@@ -8,13 +8,13 @@ public class Storage {
 
     List<Integer> list = new ArrayList<>();
 
-    synchronized Integer update() {
+    Integer update() {
         int i = (int) (Math.random() * 10);
         list.add(i);
         return i;
     }
 
-    synchronized Integer getElement() {
+    Integer getElement() {
         return list.get((int) (Math.random() * list.size()));
     }
 }
